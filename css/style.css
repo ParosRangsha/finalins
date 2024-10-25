@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    background-color: #9ff;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.userinput{
+    padding: 5px 0;
+    background-color: #bff;
+    width: 100%;
+    position: fixed;
+    z-index: 998;
+}
+.userinput .userData{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 10px;
+}
+.userinput .userData #txtInput{
+    padding: 5px 10px;
+    border: 2px dashed #99f;
+}
+.userinput .userData .arrow{
+    display: flex;
+    flex-direction: column;
+}
+.userinput .userData .arrow a{
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+.userinput .userData #btnCheck{
+    padding: 5px 10px;
+    border: 2px dashed #99f;
+    background: linear-gradient(45deg, #ff0);
+}
+.datas{
+    padding: 500px 0;
+}
