@@ -11,58 +11,61 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">Final Inspection</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Post</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Report</a>
-                <ul>
-                  <li><a href="#" id="btnHandover">Hand Over</a></li>
-                  <li><a href="#" id="btnShadeHold">Shade Hold</a></li>
-                  <li><a href="#" id="btnLocationHold">Location Hold</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Final Inspection</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Post</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Report</a>
+            <ul>
+              <li><a href="#" id="btnHandover">Hand Over</a></li>
+              <li><a href="#" id="btnShadeHold">Shade Hold</a></li>
+              <li><a href="#" id="btnLocationHold">Location Hold</a></li>
             </ul>
-          </div>
-        </div>
-    </nav>
-    <section class="userInput">
-        <div class="container">
-            <div class="userData">
-                <label for="txtInput">Dispo</label>
-                <input type="text" placeholder="Enter Dispo" id="txtInput">
-                <div class="arrow">
-                    <a href="#"><i class="fa-solid fa-angle-up"></i></a>
-                    <a href="#"><i class="fa-solid fa-angle-down"></i></a>
-                </div>
-                <button id="btnCheck">Check</button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="userInput">
+    <div class="container">
+        <div class="userData">
+            <label for="txtInput">Dispo</label>
+            <input type="text" placeholder="Enter Dispo" id="txtInput">
+            <button id="btnCheck">Check</button>
+            <div class="arrow">
+                <a href="#"><i class="fa-solid fa-angle-up"></i></a>
+                <a href="#"><i class="fa-solid fa-angle-down"></i></a>
             </div>
         </div>
-    </section>
+    </div>
+  </section>
     <div class="datas">
       <div class="container d-flex">
         <div class="leftSide">
-
+          <h5>Summary</h5>
+          <hr>
         </div>
         <div class="rightSide">
           <div class="headBar">
             <ul id="headBarTitle"></ul>
           </div>
-          <ul id="dataViewer"></ul>
+          <div class="view">
+            <ul id="dataViewer"></ul>
+          </div>
         </div>
       </div>
     </div>
@@ -71,7 +74,7 @@
 
 
 
-
+    <script src="js/myarrays.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/script.js"></script>
 </body>
