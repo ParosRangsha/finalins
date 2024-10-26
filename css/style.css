@@ -1,46 +1,134 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 .navbar{
-    background-color: #9ff;
+    background-color: #555;
     position: sticky;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 999;
+    padding: 0;
 }
-.userinput{
-    padding: 5px 0;
-    background-color: #bff;
+.navbar .navbar-brand{
+    color: white;
+    font-size: 20px !important;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.navbar ul li{
+    width: 150px;
+    position: relative;
+}
+.navbar ul li a{
+    display: inline-block;
     width: 100%;
-    position: fixed;
+    text-align: center;
+    color: white;
+    transition: 2s;
+}
+.navbar ul li a:hover{
+    background-color: #995;
+
+}
+.navbar ul li ul{
+    list-style: none;
+    position: absolute;
+    background-color: #ddd;
+    left: 0;
+    top: 100%;
+    padding: 0;
+    transform: scaleY(0);
+    transition: 1s;
+}
+.navbar ul li:hover > ul{
+    transform: scaleY(1);
+}
+.navbar ul li ul li a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 0;
+    color: black;
+}
+.navbar ul li ul li a:hover{
+    background-color: #aaf;
+    color: white;
+}
+.userInput{
+    padding: 5px 0;
+    background-color: #5f5f5f;
+    width: 100%;
+    position: sticky;
     z-index: 998;
 }
-.userinput .userData{
+.userInput .userData{
     display: flex;
     justify-content: right;
     align-items: center;
     gap: 10px;
 }
-.userinput .userData #txtInput{
+.userInput .userData label{
+    color:white;
+}
+.userInput .userData #txtInput{
+    width: 120px;
     padding: 5px 10px;
     border: 2px dashed #99f;
+    border-radius: 10px;
+    text-align: right;
 }
-.userinput .userData .arrow{
+.userInput .userData .arrow{
     display: flex;
     flex-direction: column;
 }
-.userinput .userData .arrow a{
+.userInput .userData .arrow a{
     color: black;
     padding: 0;
     margin: 0;
 }
-.userinput .userData #btnCheck{
+.userInput .userData #btnCheck{
     padding: 5px 10px;
     border: 2px dashed #99f;
-    background: linear-gradient(45deg, #ff0);
+    background-color: #555;
+    color: white;    
+    border-radius: 10px;
+}
+.userInput .userData #btnCheck:hover{
+    background-color: #666;
 }
 .datas{
-    padding: 500px 0;
+    padding: 0;
+}
+.datas .leftSide{
+    width: 20%;
+    background-color: #777;
+    height: 600px;
+}
+.datas .rightSide{
+    padding: 0;
+    width: 80%;
+    background-color: #aaa;
+}
+.datas .rightSide .headBar ul{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #555;
+    padding: 10px 0;
+    position: sticky;
+}
+.datas .rightSide .headBar ul li{
+    color: white;
+}
+.datas .rightSide #dataViewer{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.datas .rightSide #dataViewer{
+    padding: 0;
 }
