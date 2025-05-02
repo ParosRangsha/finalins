@@ -10,7 +10,9 @@ const Handoverentry = () => {
   let [endRoll, setEndRoll] = useState('')
   let [totalRoll, setTotalRoll] = useState('')
   let [qty, setQTY] = useState('')
-  let [unit, SetUnit] = useState('')
+  let [unit, setUnit] = useState('')
+  console.log(unit);
+  
   
   let heading = ['Date', 'Dispo', 'Start Roll', 'End Roll', 'Total Roll', 'QTY', 'Unit',]
  
@@ -66,7 +68,7 @@ const Handoverentry = () => {
               <input onChange={(e)=>setQTY(e.target.value)} type="text" id='Qty' className='w-[60%] text-center'/>
             </div>
             <div className="item flex justify-center items-center w-[14.28%] gap-2">
-              <select onChange={(e)=>SetUnit(e.target.value)} className='w-[60%] text-center'>
+              <select onChange={(e)=>setUnit(e.target.value)} className='w-[60%] text-center'>
                 <option value="Yard">Yard</option>
                 <option value="Meter">Meter</option>
               </select>
