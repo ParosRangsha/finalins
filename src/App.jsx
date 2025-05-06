@@ -6,6 +6,7 @@ import Post from './Pages/Post'
 import About from './Pages/About'
 import Contact from './Pages/Contact'
 import Report from './Pages/Report'
+import Handoverentry from './Report/Handoverentry'
 
 let multipage = createBrowserRouter(createRoutesFromElements(
   <>
@@ -16,6 +17,8 @@ let multipage = createBrowserRouter(createRoutesFromElements(
       <Route path='/about' element={<About/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/report' element={<Report/>}/>
+
+      <Route path='/handoverentry' element={<Handoverentry/>}/>
     </Route>
   </>
 ))
