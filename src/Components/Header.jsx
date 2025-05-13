@@ -1,12 +1,29 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Container from './Container';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-  const [isReportOpen, setIsReportOpen] = useState(false);
   const [isUpdateOpen, setIsUpdateOpen] = useState(false);
+  const [isReportOpen, setIsReportOpen] = useState(false);
+  let reportref = useRef()
+  let updateref = useRef()
+
+  useEffect(()=>{
+    document.addEventListener('click', (e)=>{
+      if(reportref.current.contains(e.target)){
+        setIsReportOpen(!isReportOpen)
+      }else{
+        setIsReportOpen(false)
+      }
+      if(updateref.current.contains(e.target)){
+        setIsUpdateOpen(!isUpdateOpen)
+      }else{
+        setIsUpdateOpen(false)
+      }
+    })
+  },[])
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-white shadow-md z-50 sticky w-full left-0">
       <Container>
         <div className="lg:flex justify-between">
           <div className="flex items-center">
@@ -17,7 +34,7 @@ const Header = () => {
             <Link to="/about" className="text-gray-700 hover:text-blue-600 lg:px-[15px] py-[20px]">About</Link>
             <Link to="/about" className="text-gray-700 hover:text-blue-600 lg:px-[15px] py-[20px]">Contact</Link>
 
-            <div className="relative">
+            <div className="relative" ref={updateref}>
               <button onClick={() => setIsUpdateOpen(!isUpdateOpen)} className="text-gray-700 hover:text-blue-600 focus:outline-none py-[20px] lg:px-[15px]">Update ▾</button>
               {isUpdateOpen && (
                 <div className="absolute z-10 bg-white border border-gray-200 rounded shadow-md top-[100%] right-0 w-40">
@@ -27,7 +44,7 @@ const Header = () => {
                 </div>
               )}
             </div>
-            <div className="relative">
+            <div className="relative" ref={reportref}>
               <button onClick={() => setIsReportOpen(!isReportOpen)} className="text-gray-700 hover:text-blue-600 focus:outline-none py-[20px] lg:px-[15px]">Report ▾</button>
               {isReportOpen && (
                 <div className="absolute z-10 bg-white border border-gray-200 rounded shadow-md top-[100%] right-0 w-40">

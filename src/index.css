@@ -1,3 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.showi:nth-child(even){
+    background-color: #eee;
+}

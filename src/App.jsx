@@ -9,6 +9,8 @@ import Handover from './PageCompo/Handover'
 import Shadehold from './PageCompo/Shadehold'
 import Excessfabric from './PageCompo/Excessfabric'
 import Handovershow from './PageCompo/Handovershow'
+import Shadeholdshow from './PageCompo/Shadeholdshow'
+import Excessfabricshow from './PageCompo/Excessfabricshow'
 function App() {
   let multipage = createBrowserRouter(createRoutesFromElements(
     <Route element={<Layout/>}>
@@ -20,6 +22,8 @@ function App() {
       <Route path='/shadehold' element={<Shadehold/>}/>
       <Route path='/excessfabric' element={<Excessfabric/>}/>
       <Route path='/handovershow' element={<Handovershow/>}/>
+      <Route path='/shadeholdshow' element={<Shadeholdshow/>}/>
+      <Route path='/excessfabricshow' element={<Excessfabricshow/>}/>
     </Route>
   ))
   return (
