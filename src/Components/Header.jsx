@@ -88,19 +88,19 @@ const Header = () => {
               <ImMenu className='lg:hidden' onClick={hanleMenu}/>
             </div>
           </div>
+        {
+          showuser &&
+          <div className="absolute w-full h-full top-0 left-0 bg-[#db4444]">
+            <div className="absolute bg-[#ddd] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] p-[20px] flex flex-col gap-3 rounded-[10px]">
+              <FaUser className='absolute bottom-[99%] left-[50%] text-[100px] translate-x-[-50%] text-[#ddd]'/>
+              <input type="text" placeholder='User ID' onChange={(e)=>setUser(e.target.value)} className='py-[5px] px-[10px]'/>
+              <input type="password" placeholder='Password' onChange={(e)=>setPassword(e.target.value)} className='py-[5px] px-[10px]'/>
+              <button onClick={handleLogin} className='border-[1px] border-[#fff] py-[5px]'>Login</button>
+            </div>
+          </div>
+        }
         </Container>
       </nav>
-      {
-        showuser &&
-        <div className="absolute w-full h-full top-0 left-0 bg-[#db4444]">
-          <div className="absolute bg-[#ddd] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] p-[20px] flex flex-col gap-3 rounded-[10px]">
-            <FaUser className='absolute bottom-[99%] left-[50%] text-[100px] translate-x-[-50%] text-[#ddd]'/>
-            <input type="text" placeholder='User ID' onChange={(e)=>setUser(e.target.value)} className='py-[5px] px-[10px]'/>
-            <input type="password" placeholder='Password' onChange={(e)=>setPassword(e.target.value)} className='py-[5px] px-[10px]'/>
-            <button onClick={handleLogin} className='border-[1px] border-[#fff] py-[5px]'>Login</button>
-          </div>
-        </div>
-      }
     </div>
   )
 }
