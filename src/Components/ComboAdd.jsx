@@ -25,8 +25,9 @@ const ComboAdd = () => {
         })
     }
   return (
-    <div>
-        <button onClick={addingdata}>Add Combo</button>
+    <div className='w-[300px] mx-auto my-[40px]'>
+      {/* <textarea name="comboarray" id="comboArray" className='block w-full p-2' placeholder='Your array here' onChange={(e)=>mydata.push(e.target.value)}></textarea> */}
+      <button onClick={addingdata} className='bg-[#db4444] py-[10px] px-[20px] my-[10px]'>Add Combo</button>
     </div>
   )
 }

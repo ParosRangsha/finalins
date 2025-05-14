@@ -41,11 +41,11 @@ const Header = () => {
       }else{
         setIsReportOpen(false)
       }
-      if(updateref.current.contains(e.target)){
-        setIsUpdateOpen(!isUpdateOpen)
-      }else{
-        setIsUpdateOpen(false)
-      }
+      // if(updateref.current.contains(e.target)){
+      //   setIsUpdateOpen(!isUpdateOpen)
+      // }else{
+      //   setIsUpdateOpen(false)
+      // }
     })
   },[])
   return (
@@ -68,6 +68,7 @@ const Header = () => {
                     <Link to='/handover' href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100">Handover</Link>
                     <Link to='/shadehold' href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100">Shade Hold</Link>
                     <Link to='/excessfabric' href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100">Excess Fabric</Link>
+                    <Link to='/comboadd' href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100">Combo Handover</Link>
                   </div>
                 )}
               </div>
