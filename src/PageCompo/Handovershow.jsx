@@ -20,7 +20,7 @@ const Handovershow = () => {
     }
 
   return (
-    <div className="handshow">
+    <div className="handshow text-[8px] lg:text-[16px]">
         <div className="searchbar bg-[#ddd]">
             <Container>
                 <div className="py-[10px] flex gap-2 items-center">

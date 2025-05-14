@@ -28,17 +28,9 @@ const Handover = () => {
     })
     
   };
-
-  const handleDelete = () => {
-    console.log('Delete Data')
-  };
-
-  const handleUpdate = () => {
-    console.log('Update Data')
-  };
   
   return (
-    <div className="max-w-3xl mx-auto mt-10 p-6 bg-white shadow-md rounded-md">
+    <div className="max-w-3xl mx-auto my-[20px] p-6 bg-white shadow-md rounded-md">
       <h2 className="text-2xl font-semibold mb-6 text-center text-blue-600">Handover Entry</h2>
       <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
@@ -74,11 +66,8 @@ const Handover = () => {
           </select>
         </div>
       </form>
-
-      <div className="flex justify-center gap-4 mt-6">
+      <div className="flex justify-center gap-4 my-[20px]">
         <button type="button" onClick={handleAdd} className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded" > Add Data </button>
-        <button type="button" onClick={handleDelete} className="bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded" > Delete </button>
-        <button type="button" onClick={handleUpdate} className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-4 py-2 rounded">Update</button>
       </div>
     </div>
   )
